@@ -10,15 +10,15 @@ public class Alexandria {
         JFrame AlexandraFrame = new JFrame();
         AlexandraFrame.setTitle("Alexandra");
 
-        ImageIcon Alexbackground = new ImageIcon("C:\\Users\\zhouz\\Desktop\\7 wonders\\src\\images\\文明背景\\Alexandria.png");
+        ImageIcon Alexbackground = new ImageIcon("src/images/fond_des_merveilles/Alexandria.png");
         JLabel alexLabel = new JLabel(Alexbackground);
         alexLabel.setSize(Alexbackground.getIconWidth(),Alexbackground.getIconHeight());
         AlexandraFrame.getLayeredPane().add(alexLabel,new Integer(Integer.MIN_VALUE));
         JPanel alexPanel = (JPanel)AlexandraFrame.getContentPane();
-        alexPanel.setOpaque(false);     //transparence
+        alexPanel.setOpaque(false); // transparence
         alexLabel.setLayout(null);
 
-        //画面设置
+        //Paramètres de l'écran
         AlexandraFrame.setSize(Alexbackground.getIconWidth(),Alexbackground.getIconHeight());;
         AlexandraFrame.setLocationRelativeTo(null);
         AlexandraFrame.setVisible(true);

@@ -13,7 +13,7 @@ public class PVP extends JFrame{
         PVPFrame.setTitle("PVP 模式");      
 
         //设置背景
-        ImageIcon SpaceBackground = new ImageIcon("src/images/background/星空背景.GIF");
+        ImageIcon SpaceBackground = new ImageIcon("src/images/background/SpaceBackground.GIF");
         JLabel imageLabel = new JLabel(SpaceBackground);
         imageLabel.setSize(SpaceBackground.getIconWidth(),SpaceBackground.getIconHeight());
         PVPFrame.getLayeredPane().add(imageLabel,new Integer(Integer.MIN_VALUE));
@@ -21,13 +21,13 @@ public class PVP extends JFrame{
         PVPpan.setOpaque(false);
         PVPpan.setLayout(null);
         
-        //nouvelle zone de texte
+        //zone de texte
         JTextPane wordsArea = new JTextPane();
         wordsArea.setBounds(300, 200, 200, 30);
         wordsArea.setEditable(false);   //Les paramètres ne peuvent pas être modifiés
-        wordsArea.setFont(new Font("楷体",Font.BOLD,16)); // couleur de la police
-        wordsArea.setBackground(new Color(3,70,124));   //couleur de fond
-        wordsArea.setForeground(Color.WHITE);   //couleur de texte
+        wordsArea.setFont(new Font("楷体",Font.BOLD,16));
+        wordsArea.setBackground(new Color(3,70,124));   //Définir la couleur de fond
+        wordsArea.setForeground(Color.WHITE);   //Définir la couleur de la police
         
         wordsArea.setText("How many players?");
         
@@ -41,14 +41,14 @@ public class PVP extends JFrame{
         PVPpan.add(playersnumber);
         playersnumber.setBounds(350, 250, 100, 25);
 
-        //Ajouter un bouton
+        //Ajouter un bouton de confirmation
         JButton confirmButton = new JButton("Confirm");
         confirmButton.setBounds(450, 300, 100, 30);
         PVPpan.add(confirmButton);
 
-        //Ajouter un bouton de retour
+        //Paramètres de l'écran
         PVPFrame.setSize(SpaceBackground.getIconWidth(),SpaceBackground.getIconHeight());
-        PVPFrame.setLocationRelativeTo(null);       //Centrer la fenêtre
+        PVPFrame.setLocationRelativeTo(null);       //La fenêtre s'affiche au centre de l'écran
         PVPFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         PVPFrame.setVisible(true);
 
@@ -58,8 +58,8 @@ public class PVP extends JFrame{
                 NumberOfPlayers = playersnumber.getText();
                 new PVPWonderChoose(NumberOfPlayers);
                 //new PVPWonderChoose(NumberOfPlayers);
-                PVPFrame.setVisible(false);     //Fermer la fenêtre
-                //PVPFrame.dispose();
+                PVPFrame.setVisible(false);     //Fermer la fenêtre - Masquer la fenêtre
+                //PVPFrame.dispose();       //Une autre façon de fermer une fenêtre
             }
         });
 

@@ -11,8 +11,8 @@ public class Registration extends JFrame {
 	HashMap<String,char[]> Users= new HashMap<>();
 
 	public  Registration() {
-		setSize(300,290);// taille de fenêtre
-		setTitle("注册窗口");
+		setSize(300,290);//Taille de la fenêtre
+		setTitle("Registration Window");
 		JLabel username=new JLabel("Username"); //label de nom d'utilisateur
 		JLabel password=new JLabel("Password");
 		JTextField enter_username=new JTextField(15);//texte de nom d'utilisateur
@@ -22,8 +22,9 @@ public class Registration extends JFrame {
 		JButton reset=new JButton("Reset");
 		JButton back=new JButton("Back");
 		setVisible(true);//visualisation de fenêtre
-		Container Loginin=getContentPane();//obtenir un conteneur
-//		Ajoutez les zones de texte Jlabel et JTextField du nom d'utilisateur et du mot de passe, la zone de mot de passe JPasswordField et les boutons JButton OK, JButton Reset et JButton Register au conteneur.                       //
+		Container Loginin=getContentPane();//conteneur
+//		Ajoutez les zones de texte Jlabel et JTextField du nom d'utilisateur et du mot de passe,
+//		la zone de mot de passe JPasswordField et les boutons JButton OK, JButton Reset et JButton Register au conteneur.                         //
         Loginin.add(username);
 		Loginin.add(password);
 		Loginin.add(enter_username);
@@ -31,9 +32,10 @@ public class Registration extends JFrame {
 		Loginin.add(confirm);
 		Loginin.add(reset);
 		Loginin.add(back);
-		setBounds(400,400,400,400);//définir la longueur et la largeur de la fenêtre à 300, 300, et afficher la fenêtre à 300, 300 à partir du coin supérieur gauche de l'écran
+		setBounds(400,400,400,400);//définir la longueur et la largeur de la fenêtre à 300, 300,
+//		et afficher la fenêtre à 300, 300 à partir du coin supérieur gauche de l'écran
 		Loginin.setLayout(null);
-//		 Définir la position et la taille de chaque composant dans le conteneur
+//		Définir la position et la taille de chaque composant dans le conteneur
         username.setBounds(40,100,80,18);
 		password.setBounds(40,200,80,18);
 		enter_username.setBounds(110,100,200,18);

@@ -21,7 +21,7 @@ public class PVPWonderChoose extends JFrame{
         ChooseWonderFrame.setTitle("Choose Wonder");
         
         //Définir l'image de fond
-        ImageIcon ChooseWonderBackground = new ImageIcon("C:\\Users\\zhouz\\Desktop\\7 wonders\\src\\images\\background\\游玩背景.png");
+        ImageIcon ChooseWonderBackground = new ImageIcon("src/images/background/playBackground.png");
         JLabel imageLabel = new JLabel(ChooseWonderBackground);
         imageLabel.setSize(ChooseWonderBackground.getIconWidth(),ChooseWonderBackground.getIconHeight());
         ChooseWonderFrame.getLayeredPane().add(imageLabel,new Integer(Integer.MIN_VALUE));
@@ -39,25 +39,19 @@ public class PVPWonderChoose extends JFrame{
         backgroundJpanel.setOpaque(false);
         backgroundJpanel.setLayout(null);
 
-        //Zone de texte indiquant le nombre de joueurs
-        //JTextPane ceshi = new JTextPane();
-        //ceshi.setBounds(20, 20, 400, 20);
-        //ceshi.setEditable(false);
-        //ceshi.setText("Here are " + getText + " Player:");
-        //backgroundJpanel.add(ceshi);
 
-            //Configuration des données
+        //Configuration des données
         Vector<Vector<Object>> contextList = new Vector<>();    //Liste des données
 
         Vector<Object> titleList = new Vector<>();      //Liste des titres
-        titleList.add("玩家");
-        titleList.add("名字");
-        titleList.add("奇迹");
+        titleList.add("Player");
+        titleList.add("Name");
+        titleList.add("Wonder");
 
 
-        //Création du modèle DefaultTableMode ; Gestion des conteneurs de données
+        // Création du modèle DefaultTableMode ; Gestion des conteneurs de données
         DefaultTableModel model = new DefaultTableModel(contextList, titleList);
-        JTable table = new JTable(model);   //Configuration du tableau.
+        JTable table = new JTable(model);   //Configuration du tableau
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBounds(180, 60, 400, 300);
         backgroundJpanel.add(scrollPane);
@@ -74,9 +68,9 @@ public class PVPWonderChoose extends JFrame{
         wonderList.add("Olympia");
         wonderList.add("Rhodes");
 
-
-
         //Création de conseils textuels
+
+        //Création d'une sélection de numéros de série de joueurs
         JTextPane nopPane = new JTextPane();
         nopPane.setBounds(1125, 65, 250, 50);
         nopPane.setEditable(false);
@@ -85,7 +79,7 @@ public class PVPWonderChoose extends JFrame{
         nopPane.setText("CHOOSE YOUR  PLAYER  : "); 
         backgroundJpanel.add(nopPane); 
 
-        //Créer une sélection de numéros de série de joueurs
+        //Création d'une sélection de numéros de joueurs
         JLabel playersLabel = new JLabel("Player: ");
         DefaultComboBoxModel<Object> NumberOfPlayer = new DefaultComboBoxModel<>();
         for (int i = 1; i<(Integer.parseInt(getText)+1); i ++){
@@ -97,7 +91,7 @@ public class PVPWonderChoose extends JFrame{
         backgroundJpanel.add(playersLabel);
         backgroundJpanel.add(comboBoxList1);
 
-        //Créer une sélection de noms de joueurs
+        //Création une sélection de noms de joueurs
         JLabel nameLabel = new JLabel("Name: ");
         JTextField nameofPlayerField = new JTextField(20);
         nameLabel.setBounds(1150, 200, 100, 40);
@@ -125,7 +119,7 @@ public class PVPWonderChoose extends JFrame{
         //Ajouter l'icône des 7 merveilles
 
         //Alexandria
-        ImageIcon AlexandriaIcon = new ImageIcon("src/images/cards/7大奇迹/Alexandria.png");        
+        ImageIcon AlexandriaIcon = new ImageIcon("src/images/cards/wonders/Alexandria.png");
         JButton alexandriaButton = new JButton();
         alexandriaButton.setOpaque(false);
         alexandriaButton.setContentAreaFilled(false);
@@ -136,7 +130,7 @@ public class PVPWonderChoose extends JFrame{
         backgroundJpanel.add(alexandriaButton);
 
         //Babylon
-        ImageIcon BabylonIcon = new ImageIcon("src/images/cards/7大奇迹/Babylon.png");
+        ImageIcon BabylonIcon = new ImageIcon("src/images/cards/wonders/Babylon.png");
         JButton babylButton = new JButton();
         babylButton.setOpaque(false);
         babylButton.setContentAreaFilled(false);
@@ -147,7 +141,7 @@ public class PVPWonderChoose extends JFrame{
         backgroundJpanel.add(babylButton);
 
         //Ephesus
-        ImageIcon EphesusIcon = new ImageIcon("src/images/cards/7大奇迹/Ephesus.png");
+        ImageIcon EphesusIcon = new ImageIcon("src/images/cards/wonders/Ephesus.png");
         JButton ephesusButton = new JButton();
         ephesusButton.setOpaque(false);
         ephesusButton.setContentAreaFilled(false);
@@ -158,7 +152,7 @@ public class PVPWonderChoose extends JFrame{
         backgroundJpanel.add(ephesusButton);
 
         //Giza
-        ImageIcon GizaIcon = new ImageIcon("src/images/cards/7大奇迹/Giza.png");
+        ImageIcon GizaIcon = new ImageIcon("src/images/cards/wonders/Giza.png");
         JButton gizaButton = new JButton();
         gizaButton.setOpaque(false);
         gizaButton.setContentAreaFilled(false);
@@ -169,7 +163,7 @@ public class PVPWonderChoose extends JFrame{
         backgroundJpanel.add(gizaButton);
 
         //Halicarnassus
-        ImageIcon HalicarnassusIcon = new ImageIcon("src/images/cards/7大奇迹/Halicarnassus.png");
+        ImageIcon HalicarnassusIcon = new ImageIcon("src/images/cards/wonders/Halicarnassus.png");
         JButton HalicarnassusButton = new JButton();
         HalicarnassusButton.setOpaque(false);
         HalicarnassusButton.setContentAreaFilled(false);
@@ -180,7 +174,7 @@ public class PVPWonderChoose extends JFrame{
         backgroundJpanel.add(HalicarnassusButton);
 
         //Olympia
-        ImageIcon OlympiaIcon = new ImageIcon("src/images/cards/7大奇迹/Olympia.png");
+        ImageIcon OlympiaIcon = new ImageIcon("src/images/cards/wonders/Olympia.png");
         JButton OlympiaButton = new JButton();
         OlympiaButton.setOpaque(false);
         OlympiaButton.setContentAreaFilled(false);
@@ -191,7 +185,7 @@ public class PVPWonderChoose extends JFrame{
         backgroundJpanel.add(OlympiaButton);
 
         //Rhodes
-        ImageIcon RhodesIcon = new ImageIcon("src/images/cards/7大奇迹/Rhodes.png");
+        ImageIcon RhodesIcon = new ImageIcon("src/images/cards/wonders/Rhodes.png");
         JButton RhodesButton = new JButton();
         RhodesButton.setOpaque(false);
         RhodesButton.setContentAreaFilled(false);

@@ -2,24 +2,43 @@ package StartGame;
 
 import PVE.PVE;
 import PVP.PVP;
+import music.code.Background;
+import music.code.ButtonClick1;
+import music.code.ButtonClick2;
 
 import javax.swing.*;
+import java.applet.Applet;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.net.MalformedURLException;
 
 public class StartGame extends JFrame{
 	public StartGame(){
 
+		//Jouer de la musique de fond
+		Background bgm = new Background();
+		try {  
+            bgm.setAudioClip(Applet  
+                    .newAudioClip((new File("src/music/bgm/Mystica-Bandari.wav")).toURL()));  
+        } catch (MalformedURLException e) {  
+            e.printStackTrace();  
+        }  
+        bgm.loop();//Lecture en boucle
+
+		//Définir le son du bouton
+		ButtonClick1 buttonClick1 = new ButtonClick1();
+		ButtonClick2 buttonClick2 = new ButtonClick2();
 
 		//Configuration de la fenêtre
 		JFrame game = new JFrame("Game");
-		game.setTitle("Bienvenue dans le jeu");
+		game.setTitle("欢迎来到新窗口");
 
 		//arrière-plan
 		ImageIcon image = new ImageIcon("src/images/background/7-wonders-architects.png");
 		JLabel imageJLabel = new JLabel(image);
-		imageJLabel.setSize(image.getIconWidth(),image.getIconHeight());
-		game.getLayeredPane().add(imageJLabel, new Integer(Integer.MIN_VALUE));
+		imageJLabel.setSize(image.getIconWidth(),image.getIconHeight()); 
+		game.getLayeredPane().add(imageJLabel,new Integer(Integer.MIN_VALUE));
 		JPanel pan = (JPanel)game.getContentPane();
 		pan.setOpaque(false);
 		pan.setLayout(null);
@@ -44,7 +63,7 @@ public class StartGame extends JFrame{
 		PVP.setBounds(368, 150, 100, 30);
 		PVE.setBounds(368, 200, 100, 30);
 		quietButton.setBounds(770, 340, quiet.getIconWidth(), quiet.getIconHeight());
-
+		
 		//System.out.println(image.getIconWidth());
 		//System.out.println(image.getIconHeight());
 
@@ -57,6 +76,8 @@ public class StartGame extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				buttonClick2.playMusic();
+				bgm.stop();
 			}
 
 		});
@@ -65,6 +86,7 @@ public class StartGame extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				buttonClick1.playMusic();
 				new PVP();
 				game.setVisible(false);
 			}
@@ -75,9 +97,11 @@ public class StartGame extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				buttonClick1.playMusic();
 				new PVE();
 				game.setVisible(false);
 			}
+
 		});
 	}
 }

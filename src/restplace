@@ -1,16 +1,17 @@
-        //传递内部数据
-        for(Vector<Object> v : contextList){        //获得内部数据
+        //Transfert de données internes
+        for(Vector<Object> v : contextList){        //Accès aux données internes
             for(int i = 0; i<v.size();i++){
-                allList.add((String) v.elementAt(i));   //一个个单独的String的数据列表
+                allList.add((String) v.elementAt(i));   //Une liste de données pour une seule chaîne
             }
         } 
-        //创建玩家编号,玩家名字，玩家选择的奇迹列表
+        //Créer le numéro du joueur, son nom, la liste des merveilles choisies par le joueur.
         List<String> numberList = new ArrayList<>();
         List<String> nameList = new ArrayList<>();
         List<String> wonderList = new ArrayList<>();
-        //List<String> alltheList = new ArrayList<>();    //创造一个所有玩家选择的奇迹加上放在下面的卡组的列表
+        //List<String> alltheList = new ArrayList<>();    //Créez une liste de toutes les merveilles choisies par les joueurs
+        ainsi que les jeux de cartes placés ci-dessous.
 
-        //设置玩家
+        //Réglage du lecteur
         for(int i = 0;i<contextList.size();i++){
             //alltheList.add("Card"+i);
             for (int j = 0;j<allList.size();j++){
@@ -24,7 +25,7 @@
                 }                 
             }
             
-            //创建所有玩家的数据
+            //Créer des données pour tous les joueurs
             if(i == 0){
                 Players Player1 = new Players(numberList.get(i), nameList.get(i), wonderList.get(i));
             }else if (i == 1){
@@ -42,7 +43,7 @@
             }            
         }
 
-        //创建卡组
+        //Création d’un groupe de cartes
 
         //resources
         Cards BRICK = new Cards("Brick", new Image("src/images/cards/resources/BRICK.png"));
@@ -58,16 +59,16 @@
         Cards WHEEL = new Cards("Wheel", new Image("src/images/cards/science/WHEEL.png"));
 
         //score
-        Cards TWOPOINTSANDCAT  = new Cards("TwoPointsAndCat", new Image("src/images/cards/score/2分+猫猫棋子.png"));
-        Cards THREEPOINTS = new Cards("ThreePoints", new Image("src/images/cards/score/3分.png"));
+        Cards TWOPOINTSANDCAT  = new Cards("TwoPointsAndCat", new Image("src/images/cards/score/2 points + pièces d'échecs du chat.png"));
+        Cards THREEPOINTS = new Cards("ThreePoints", new Image("src/images/cards/score/3points.png"));
 
         //war
-        Cards WAR = new Cards("War", new Image("src/images/cards/war/战争分数.png"));
-        Cards WAR1 = new Cards("War1", new Image("src/images/cards/war/战争分数+一个号角.png"));
-        Cards WAR2 = new Cards("War2", new Image("src/images/cards/war/战争分数+2个号角.png"));
+        Cards WAR = new Cards("War", new Image("src/images/cards/war/War score.png"));
+        Cards WAR1 = new Cards("War1", new Image("src/images/cards/war/War score + 1 horn.png"));
+        Cards WAR2 = new Cards("War2", new Image("src/images/cards/war/War score +2 horns.png"));
 
 
-            //设置卡牌判断
+            //Établir le jugement de la carte
     public static String jugmentcard(String name){
         switch(name){
             case "Brick" :
@@ -89,15 +90,15 @@
             case "Wheel" :
                 return "src/images/cards/science/WHEEL.png";
             case "TwoPointsAndCat" :
-                return "src/images/cards/score/2分+猫猫棋子.png";
+                return "src/images/cards/score/2 points + pièces d'échecs du chat.png";
             case "ThreePoints" :
-                return "src/images/cards/score/3分.png";
+                return "src/images/cards/score/3points.png";
             case "War" :
-                return "src/images/cards/war/战争分数.png";
+                return "src/images/cards/war/War score.png";
             case "War1" :
-                return "src/images/cards/war/战争分数+一个号角.png";
+                return "src/images/cards/war/War score + 1 point.png";
             case "War2" :
-                return "src/images/cards/war/战争分数+2个号角.png";
+                return "src/images/cards/war/War score + 2 points.png";
             default :
                 return null;
         }
@@ -105,7 +106,7 @@
     }
 
 
-            //设置左边卡池
+            //Configurer le pool de cartes de gauche
             int i_left = 1;
             JPanel leftCardJPanel = new JPanel();
             CardLayout LeftCard = new CardLayout();
@@ -132,7 +133,7 @@
             container.add(leftCardJPanel);
             leftCardJPanel.setBounds(200,400,220,300);    
             
-            //设置右边卡池
+            //Définir le bon pool de cartes
             int i_right = 2;
             JPanel RightCardJPanel = new JPanel();
             CardLayout RightCard = new CardLayout();
@@ -160,14 +161,14 @@
             RightCardJPanel.setBounds(900,400,220,300);
 
 
-                    //设置中心卡（还没设置为卡背）
+                    //Placer la carte centrale (pas encore au dos de la carte)
         JPanel middleCardPanel = new JPanel();
-        CardLayout MiddleCard = new CardLayout();   //创造卡牌类布局
+        CardLayout MiddleCard = new CardLayout();   //Création d’une classe de cartes
         middleCardPanel.setLayout(MiddleCard);
         Cards InfoOfList;
         JButton cardListButton;
         
-        //点击切换卡牌
+        //Cliquez pour changer de carte
 
         for (int i = 0; i<lists.get(0).size();i++){
             InfoOfList = lists.get(0).get(i);
@@ -187,27 +188,27 @@
             
         }
         
-        //添加进容器中
+        //Ajouter dans le conteneur
         container.add(middleCardPanel);
         middleCardPanel.setBounds(800, 10, 220, 300);
 
 
 
-        //设置初始数据
+        //Configuration des données initiales
         int center = 0;
         int i_left = 1;
         int i_right = 2;
 
-        //设置中心卡（还没设置为卡背）
+        //Placer la carte centrale (pas encore au dos de la carte)
         List<Cards> centerCards = lists.get(center);
         Iterator<Cards> centerIT = centerCards.iterator();
         JPanel middleCardPanel = new JPanel();
-        CardLayout MiddleCard = new CardLayout();   //创造卡牌类布局
+        CardLayout MiddleCard = new CardLayout();   //Création d’une classe de cartes
         middleCardPanel.setLayout(MiddleCard);
         Cards InfoOfList;
         JButton cardListButton;
         
-        //点击切换卡牌
+        //Cliquez pour changer de carte
         while (centerIT.hasNext()){
             InfoOfList = centerIT.next();
             ImageIcon cardImageIcon = InfoOfList.getCardImage();
@@ -223,13 +224,13 @@
 
             });
         }
-        //添加进容器中
+        //Ajouter dans le conteneur
         container.add(middleCardPanel);
         middleCardPanel.setBounds(800, 10, 220, 300);
 
-        //设置左边卡池
+        //Définir le pool de cartes de gauche
         List<Cards> lefCards = lists.get(i_left);
-        Iterator<Cards> leftIT = lefCards.iterator();       //利用迭代器进行卡组处理
+        Iterator<Cards> leftIT = lefCards.iterator();       //Traitement des ponts avec les itérateurs
         JPanel leftCardJPanel = new JPanel();
         CardLayout LeftCard = new CardLayout();
         leftCardJPanel.setLayout(LeftCard);
@@ -282,3 +283,160 @@
         }
         container.add(RightCardJPanel);
         RightCardJPanel.setBounds(1420,400,220,300);
+
+
+
+        //Définir le bouton nextplayer
+        JButton nextPlayerButton = new JButton("Next");
+        container.add(nextPlayerButton);
+        nextPlayerButton.setBounds(1700, 850, 120, 70);
+        nextPlayerButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                i++;
+                //System.out.println(i_left);
+                //System.out.println(i_right);
+                i_left ++;
+                i_right ++;
+                //System.out.println(i_left);
+                //System.out.println(i_right);
+
+                String wonderString = jugmentwonders(wonderList.get(i%wonderList.size()));
+                ImageIcon wodnerIcon = new ImageIcon(wonderString);
+                wodnerJLabel.setIcon(wodnerIcon);
+
+                if(i_left >= wonderList.size()+1){
+                    i_left = 1;
+                }
+                if(i_right >= wonderList.size()+1){
+                    i_right = 1;
+                }
+                System.out.println(i_left);
+                System.out.println(i_right);
+                getCard(lists.get(i_left), container, 200, 400);
+                getCard(lists.get(i_right), container, 200, 400);
+
+                //System.out.println(i);
+            }
+            
+        });
+
+
+            //Définir pour obtenir des groupes de cartes individuelles
+    public static void getCard(List<Cards> cardlist,Container co,int x,int y){
+        Iterator<Cards> it = cardlist.iterator();
+        JPanel jPanel = new JPanel();
+        CardLayout CL = new CardLayout();
+        jPanel.setLayout(CL);
+        Cards infoCards;
+        JButton button;
+
+        while(it.hasNext()){
+            infoCards = it.next();
+            ImageIcon imageIcon = infoCards.getCardImage();
+            button = new JButton(imageIcon);
+            jPanel.add(button);
+            CL.show(jPanel, infoCards.getName());
+            button.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e) {
+                    CL.next(jPanel);
+                } 
+            });
+        }
+
+        co.add(jPanel);
+        jPanel.setBounds(x, y, 220, 300);
+    }
+
+
+
+    playersview player1 = new playersview(1,wonderList.get(0),lists.get(1),lists.get(2));
+    playersview player2 = new playersview(2,wonderList.get(1),lists.get(2),lists.get(3));
+    playersview player3 = new playersview(3,wonderList.get(2),lists.get(3),lists.get(4));
+    playersview player4 = new playersview(4,wonderList.get(3),lists.get(4),lists.get(5));
+    playersview player5 = new playersview(5,wonderList.get(4),lists.get(5),lists.get(6));
+    playersview player6 = new playersview(6,wonderList.get(5),lists.get(6),lists.get(7));
+    playersview player7 = new playersview(7,wonderList.get(6),lists.get(7),lists.get(8));
+
+    List<playersview> allPlayerView= new ArrayList<>();
+    allPlayerView.add(player1);
+    allPlayerView.add(player2);
+    allPlayerView.add(player3);
+    allPlayerView.add(player4);
+    allPlayerView.add(player5);
+    allPlayerView.add(player6);
+    allPlayerView.add(player7);
+
+
+
+
+
+        //Définir pour obtenir des groupes de cartes individuelles
+        public static JPanel getCard(List<Cards> cardlist){
+            Iterator<Cards> it = cardlist.iterator();
+            JPanel jPanel = new JPanel();
+            CardLayout CL = new CardLayout();
+            jPanel.setLayout(CL);
+            Cards infoCards;
+            JButton button;
+    
+            while(it.hasNext()){
+                infoCards = it.next();
+                ImageIcon imageIcon = infoCards.getCardImage();
+                button = new JButton(imageIcon);
+                jPanel.add(button);
+                CL.show(jPanel, infoCards.getName());
+                button.addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e) {
+                        CL.next(jPanel);
+                    } 
+                });
+                
+            }
+            jPanel.setSize( 220, 300);
+            return jPanel;
+        }
+
+
+
+
+        List<JButton> CenterDeckList = GetDeck(Separatelist.get(0));
+        List<Playersview> PlayersList = new ArrayList<>();
+        for(int i = 0;i<nameList.size();i++){
+            List<Card> cardchooselist = new ArrayList<>();
+            Playersview playersview = new Playersview(i%nameList.size(), wonderList.get(i%nameList.size()), CenterDeckList, GetDeck(LeftAndRightCardList.get(i%nameList.size())), GetDeck(LeftAndRightCardList.get((i+1)%nameList.size())),cardchooselist);
+            for(int a = 0;a<CenterDeckList.size();a++){
+                CenterDeckList.get(a).addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        int a = 0;
+                        cardchooselist.add(Separatelist.get(0).get(a));
+                        Separatelist.get(0).remove(a);
+                        a++;
+                    }
+                });
+            }
+            for(int b = 0;b<GetDeck(LeftAndRightCardList.get(i%nameList.size())).size();b++){
+                CenterDeckList.get(b).addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        int i = 0;
+                        int b = 0;
+                        cardchooselist.add(LeftAndRightCardList.get(i%nameList.size()).get(b));
+                        LeftAndRightCardList.get(i%nameList.size()).remove(b);
+                        i++;
+                        b++;
+                    }
+                });
+            }
+            for(int c = 0;c<GetDeck(LeftAndRightCardList.get((i+1)%nameList.size())).size();c++){
+                CenterDeckList.get(c).addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        int i = 0;
+                        int c = 0;
+                        cardchooselist.add(LeftAndRightCardList.get(i%nameList.size()).get(c));
+                        LeftAndRightCardList.get(i%nameList.size()).remove(c);
+                        i++;
+                        c++;
+                    }
+                });
+            }
+            PlayersList.add(playersview);
+        }

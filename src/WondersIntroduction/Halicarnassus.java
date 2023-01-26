@@ -10,7 +10,7 @@ public class Halicarnassus {
         JFrame HalicarnassusFrame = new JFrame();
         HalicarnassusFrame.setTitle("Halicarnassus");
 
-        ImageIcon Halicarnassusbackground = new ImageIcon("C:\\Users\\zhouz\\Desktop\\7 wonders\\src\\images\\文明背景\\Halicarnassus.png");
+        ImageIcon Halicarnassusbackground = new ImageIcon("src/images/fond_des_merveilles/Halicarnassus.png");
         JLabel HalicarnassusLabel = new JLabel(Halicarnassusbackground);
         HalicarnassusLabel.setSize(Halicarnassusbackground.getIconWidth(),Halicarnassusbackground.getIconHeight());
         HalicarnassusFrame.getLayeredPane().add(HalicarnassusLabel,new Integer(Integer.MIN_VALUE));
@@ -18,7 +18,7 @@ public class Halicarnassus {
         HalicarnassusPanel.setOpaque(false);     //transparence
         HalicarnassusLabel.setLayout(null);
 
-        //Paramètres d'écran
+        //Paramètres de l'écran
         HalicarnassusFrame.setSize(Halicarnassusbackground.getIconWidth(),Halicarnassusbackground.getIconHeight());;
         HalicarnassusFrame.setLocationRelativeTo(null);
         HalicarnassusFrame.setVisible(true);        

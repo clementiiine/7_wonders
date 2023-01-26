@@ -1,18 +1,19 @@
-package Cards;
+package CardAndDeck;
 
 import javax.swing.ImageIcon;
 
-public class Cards {
-    private String name;    //nome de la carte
+public class Card {
+    private String name;    //Noms des cartes
     private ImageIcon cardImage;
-    private ImageIcon cardbackImage = new ImageIcon("src/images/cards/卡牌背面/卡背.png");    //image de la carte
+    private ImageIcon cardbackImage = new ImageIcon("src/images/cards/dos_de_la_carte/dosdelacarte.png");    //卡背
     private int point;
-    private String caregory;    //categorie de la carte
+    private String caregory;    //Catégorie
     private int cardWidth = 223;
     private int cardHeight = 302;
 
-    public Cards(String name, ImageIcon cardImage){
+    public Card(String name,String caregory, ImageIcon cardImage){
         this.name = name;
+        this.caregory = caregory;
         this.cardImage = cardImage;
     }
 

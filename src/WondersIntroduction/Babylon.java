@@ -10,7 +10,7 @@ public class Babylon {
         JFrame BabylonFrame = new JFrame();
         BabylonFrame.setTitle("Babylon");
 
-        ImageIcon Babbackgroud = new ImageIcon("C:\\Users\\zhouz\\Desktop\\7 wonders\\src\\images\\文明背景\\Babylon.png");
+        ImageIcon Babbackgroud = new ImageIcon("src/images/fond_des_merveilles/Babylon.png");
         JLabel BabLabel = new JLabel(Babbackgroud);
         BabLabel.setSize(Babbackgroud.getIconWidth(),Babbackgroud.getIconHeight());
         BabylonFrame.getLayeredPane().add(BabLabel,new Integer(Integer.MIN_VALUE));
@@ -18,7 +18,7 @@ public class Babylon {
         babPanel.setOpaque(false);
         babPanel.setLayout(null);
 
-        //Paramètres d’écran
+        //Paramètres de l'écran
         BabylonFrame.setSize(Babbackgroud.getIconWidth(),Babbackgroud.getIconHeight());;
         BabylonFrame.setLocationRelativeTo(null);
         BabylonFrame.setVisible(true);

@@ -10,7 +10,7 @@ public class Rhodes {
         JFrame RhodesFrame = new JFrame();
         RhodesFrame.setTitle("Rhodes");
 
-        ImageIcon Rhodesbackground = new ImageIcon("C:\\Users\\zhouz\\Desktop\\7 wonders\\src\\images\\文明背景\\Rhodes.png");
+        ImageIcon Rhodesbackground = new ImageIcon("Csrc/images/fond_des_merveilles/Rhodes.png");
         JLabel RhodesLabel = new JLabel(Rhodesbackground);
         RhodesLabel.setSize(Rhodesbackground.getIconWidth(),Rhodesbackground.getIconHeight());
         RhodesFrame.getLayeredPane().add(RhodesLabel,new Integer(Integer.MIN_VALUE));
@@ -18,7 +18,7 @@ public class Rhodes {
         RhodesPanel.setOpaque(false);     //transparence
         RhodesLabel.setLayout(null);
 
-        //Paramètre d'écran
+        //Paramètres de l'écran
         RhodesFrame.setSize(Rhodesbackground.getIconWidth(),Rhodesbackground.getIconHeight());;
         RhodesFrame.setLocationRelativeTo(null);
         RhodesFrame.setVisible(true);          
