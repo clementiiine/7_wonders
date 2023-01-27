@@ -10,7 +10,7 @@ public class Babylon {
         JFrame BabylonFrame = new JFrame();
         BabylonFrame.setTitle("Babylon");
 
-        ImageIcon Babbackgroud = new ImageIcon("src/images/fond_des_merveilles/Babylon.png");
+        ImageIcon Babbackgroud = new ImageIcon("src/images/wonderIntroduction/Babylon.png");
         JLabel BabLabel = new JLabel(Babbackgroud);
         BabLabel.setSize(Babbackgroud.getIconWidth(),Babbackgroud.getIconHeight());
         BabylonFrame.getLayeredPane().add(BabLabel,new Integer(Integer.MIN_VALUE));

@@ -144,7 +144,7 @@ public class PlayPVP{
         showcardchoosebButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 List<Card> cardchooseList = PlayersList.get(i%nameList.size()).cardChooseList;
-                System.out.println(i%nameList.size());
+                //System.out.println(i%nameList.size());
                 //System.out.println(cardchooseList.size());
                 //for(int i = 0;i<cardchooseList.size();i++){
                 //System.out.println(cardchooseList.get(i).getName());

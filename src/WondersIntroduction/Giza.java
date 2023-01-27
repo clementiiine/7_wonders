@@ -10,7 +10,7 @@ public class Giza {
         JFrame GizaFrame = new JFrame();
         GizaFrame.setTitle("Giza");
 
-        ImageIcon Gizabackground = new ImageIcon("src/images/fond_des_merveilles/Giza.png");
+        ImageIcon Gizabackground = new ImageIcon("src/images/wonderIntroduction/Giza.png");
         JLabel GizaLabel = new JLabel(Gizabackground);
         GizaLabel.setSize(Gizabackground.getIconWidth(),Gizabackground.getIconHeight());
         GizaFrame.getLayeredPane().add(GizaLabel,new Integer(Integer.MIN_VALUE));

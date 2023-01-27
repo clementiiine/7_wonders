@@ -10,7 +10,7 @@ public class Halicarnassus {
         JFrame HalicarnassusFrame = new JFrame();
         HalicarnassusFrame.setTitle("Halicarnassus");
 
-        ImageIcon Halicarnassusbackground = new ImageIcon("src/images/fond_des_merveilles/Halicarnassus.png");
+        ImageIcon Halicarnassusbackground = new ImageIcon("src/images/wonderIntroduction/Halicarnassus.png");
         JLabel HalicarnassusLabel = new JLabel(Halicarnassusbackground);
         HalicarnassusLabel.setSize(Halicarnassusbackground.getIconWidth(),Halicarnassusbackground.getIconHeight());
         HalicarnassusFrame.getLayeredPane().add(HalicarnassusLabel,new Integer(Integer.MIN_VALUE));
