@@ -79,7 +79,7 @@ public class Loginin extends JFrame {
 
 				for(String key : Administrators.keySet()){
 					if(enter_username.getText().trim().equals(key)&&new String(enter_password.getPassword()).equals(Administrators.get(key))) {//fonction equals pour faire correspondre le nom d'utilisateur et le mot de passe
-						JOptionPane.showMessageDialog(null,"Successful administrator login");
+						JOptionPane.showMessageDialog(null,"Successful login");
 						
 						new StartGame();//créer une nouvelle fenêtre de jeu
 						setVisible(false);
@@ -89,7 +89,7 @@ public class Loginin extends JFrame {
 							System.out.println(key1);
 							System.out.println(usersMap.get(key));
 							if (enter_username.getText().trim().equals(key1)&&new String(enter_password.getPassword()).equals(String.valueOf(usersMap.get(key1)))) {
-								JOptionPane.showMessageDialog(null,"Successful user login");
+								JOptionPane.showMessageDialog(null,"Successful login");
 								new StartGame();//créer une nouvelle fenêtre de jeu
 								setVisible(false);
 							}else {

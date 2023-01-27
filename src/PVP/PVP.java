@@ -10,9 +10,9 @@ public class PVP extends JFrame{
     String NumberOfPlayers;
     public PVP() {
         JFrame PVPFrame = new JFrame();
-        PVPFrame.setTitle("PVP 模式");      
+        PVPFrame.setTitle("PVP Mode");
 
-        //设置背景
+        //Définir l'arrière-plan
         ImageIcon SpaceBackground = new ImageIcon("src/images/background/SpaceBackground.GIF");
         JLabel imageLabel = new JLabel(SpaceBackground);
         imageLabel.setSize(SpaceBackground.getIconWidth(),SpaceBackground.getIconHeight());

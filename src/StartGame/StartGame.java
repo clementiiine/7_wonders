@@ -2,29 +2,25 @@ package StartGame;
 
 import PVE.PVE;
 import PVP.PVP;
-import music.code.Background;
 import music.code.ButtonClick1;
 import music.code.ButtonClick2;
 
 import javax.swing.*;
-import java.applet.Applet;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.net.MalformedURLException;
 
 public class StartGame extends JFrame{
 	public StartGame(){
 
 		//Jouer de la musique de fond
-		Background bgm = new Background();
+		/*Background bgm = new Background();
 		try {  
             bgm.setAudioClip(Applet  
                     .newAudioClip((new File("src/music/bgm/Mystica-Bandari.wav")).toURL()));  
         } catch (MalformedURLException e) {  
             e.printStackTrace();  
         }  
-        bgm.loop();//Lecture en boucle
+        bgm.loop();//Lecture en boucle*/
 
 		//Définir le son du bouton
 		ButtonClick1 buttonClick1 = new ButtonClick1();
@@ -32,7 +28,7 @@ public class StartGame extends JFrame{
 
 		//Configuration de la fenêtre
 		JFrame game = new JFrame("Game");
-		game.setTitle("欢迎来到新窗口");
+		game.setTitle("Bienvenue dans la nouvelle fenêtre");
 
 		//arrière-plan
 		ImageIcon image = new ImageIcon("src/images/background/7-wonders-architects.png");
@@ -72,7 +68,7 @@ public class StartGame extends JFrame{
 		game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		game.setVisible(true);
 
-		quietButton.addActionListener(new ActionListener(){
+		/*quietButton.addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -80,13 +76,13 @@ public class StartGame extends JFrame{
 				bgm.stop();
 			}
 
-		});
+		});*/
 
 		PVP.addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				buttonClick1.playMusic();
+				//buttonClick1.playMusic();
 				new PVP();
 				game.setVisible(false);
 			}
@@ -97,7 +93,7 @@ public class StartGame extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				buttonClick1.playMusic();
+				//buttonClick1.playMusic();
 				new PVE();
 				game.setVisible(false);
 			}
