@@ -23,7 +23,7 @@ public class Loginin extends JFrame {
 		JButton reset=new JButton("Reset");
 		JButton registration=new JButton("registration");
 		setVisible(true);//fenêtre visible
-		Container Loginin=getContentPane();//conteneur
+		Container Loginin=getContentPane();
 //		Ajoutez les zones de texte Jlabel et JTextField du nom d'utilisateur et du mot de passe
 //		, la zone de mot de passe JPasswordField et les boutons JButton OK, JButton Reset et JButton Register au conteneur.                         //
         Loginin.add(username);
@@ -36,7 +36,7 @@ public class Loginin extends JFrame {
 		setBounds(400,400,400,400);//définir la longueur et la largeur de la fenêtre à 300, 300,
 		// et afficher la fenêtre à 300, 300 à partir du coin supérieur gauche de l'écran
 		Loginin.setLayout(null);
-//		Définir la position et la taille de chaque composant dans le conteneur
+//		Définir la position et la taille de chaque composant dans le container
         username.setBounds(40,100,80,18);
 		password.setBounds(40,200,80,18);
 		enter_username.setBounds(110,100,200,18);
@@ -71,8 +71,8 @@ public class Loginin extends JFrame {
 				}
 				
 
-                String username_start = "1";
-                String password_start = "1";
+                String username_start = "1"; // identifant initial
+                String password_start = "1"; // mot de passe initial
 
 				Map<String,String> Administrators = new HashMap<>();
 				Administrators.put(username_start, password_start);
