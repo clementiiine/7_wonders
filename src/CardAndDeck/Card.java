@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 public class Card {
     private String name;    //Noms des cartes
     private ImageIcon cardImage;
-    private ImageIcon cardbackImage = new ImageIcon("src/images/cards/dos_de_la_carte/dosdelacarte.png");    //卡背
+    private ImageIcon cardbackImage = new ImageIcon("src/images/cards/CardBack/cardBack.png");    //de de la carte
     private int point;
     private String caregory;    //Catégorie
     private int cardWidth = 223;

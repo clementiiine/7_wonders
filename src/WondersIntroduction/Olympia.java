@@ -10,7 +10,7 @@ public class Olympia {
         JFrame OlympiaFrame = new JFrame();
         OlympiaFrame.setTitle("Olympia");
 
-        ImageIcon Olympiabackground = new ImageIcon("src/images/fond_des_merveilles/Olympia.png");
+        ImageIcon Olympiabackground = new ImageIcon("src/images/wonderIntroduction/Olympia.png");
         JLabel OlympiaLabel = new JLabel(Olympiabackground);
         OlympiaLabel.setSize(Olympiabackground.getIconWidth(),Olympiabackground.getIconHeight());
         OlympiaFrame.getLayeredPane().add(OlympiaLabel,new Integer(Integer.MIN_VALUE));

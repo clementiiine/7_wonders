@@ -10,7 +10,7 @@ public class Rhodes {
         JFrame RhodesFrame = new JFrame();
         RhodesFrame.setTitle("Rhodes");
 
-        ImageIcon Rhodesbackground = new ImageIcon("Csrc/images/fond_des_merveilles/Rhodes.png");
+        ImageIcon Rhodesbackground = new ImageIcon("src/images/wonderIntroduction/Rhodes.png");
         JLabel RhodesLabel = new JLabel(Rhodesbackground);
         RhodesLabel.setSize(Rhodesbackground.getIconWidth(),Rhodesbackground.getIconHeight());
         RhodesFrame.getLayeredPane().add(RhodesLabel,new Integer(Integer.MIN_VALUE));

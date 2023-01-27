@@ -10,7 +10,7 @@ public class Ephesus {
         JFrame EphesusFrame = new JFrame();
         EphesusFrame.setTitle("Ephesus");
 
-        ImageIcon Ephesusbackground = new ImageIcon("src/images/fond_des_merveilles/Ephesus.png");
+        ImageIcon Ephesusbackground = new ImageIcon("src/images/wonderIntroduction/Ephesus.png");
         JLabel EphesusLabel = new JLabel(Ephesusbackground);
         EphesusLabel.setSize(Ephesusbackground.getIconWidth(),Ephesusbackground.getIconHeight());
         EphesusFrame.getLayeredPane().add(EphesusLabel,new Integer(Integer.MIN_VALUE));
